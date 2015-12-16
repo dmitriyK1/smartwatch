@@ -161,7 +161,7 @@ var slider = document.querySelector('.peppermint'),
         mouseDrag: true,
         dots: false,
         slideshow: true,
-        slideshowInterval: 70000000,
+        slideshowInterval: 7000,
         speed: 500
     });
 
@@ -180,6 +180,7 @@ btns.forEach(function(btn) {
 
 function onOrderClick() {
     smoothScroll('form');
+    form.querySelector('input').focus();
 }
 
 },{}]},{},["c:\\!Development\\smartwatch\\dev\\scripts\\main.js"]);
