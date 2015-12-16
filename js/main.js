@@ -153,7 +153,7 @@ function isFormFocused() {
 // SLIDER START
 //=============================================================================
 
-let slider = document.querySelector('.peppermint'),
+var slider = document.querySelector('.peppermint'),
     sliderContainer = document.getElementById('slider'),
     leftArr = sliderContainer.querySelector('.slider-prev'),
     rightArr = sliderContainer.querySelector('.slider-next'),
@@ -172,7 +172,7 @@ rightArr.addEventListener('click', sliderWidget.next, false);
 // SLIDER END
 //=============================================================================
 
-let btns = Array.prototype.slice.call(document.querySelectorAll('.js-order'));
+var btns = Array.prototype.slice.call(document.querySelectorAll('.js-order'));
 
 btns.forEach(function(btn) {
     btn.addEventListener('click', onOrderClick, false);
