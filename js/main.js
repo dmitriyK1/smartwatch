@@ -96,4 +96,27 @@ function isFormFocused() {
     }
 }
 
+//=============================================================================
+// SLIDER START
+//=============================================================================
+
+let slider = document.querySelector('.peppermint'),
+    sliderContainer = document.getElementById('slider'),
+    leftArr = sliderContainer.querySelector('.slider-prev'),
+    rightArr = sliderContainer.querySelector('.slider-next'),
+    sliderWidget = Peppermint(slider, {
+        mouseDrag: true,
+        dots: false,
+        slideshow: true,
+        slideshowInterval: 7000,
+        speed: 500
+    });
+
+leftArr.addEventListener('click', sliderWidget.prev, false);
+rightArr.addEventListener('click', sliderWidget.next, false);
+
+//=============================================================================
+// SLIDER END
+//=============================================================================
+
 },{}]},{},["c:\\!Development\\smartwatch\\dev\\scripts\\main.js"]);
