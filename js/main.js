@@ -127,20 +127,10 @@ function isOnScreen(elm) {
 // UTILITY FUNCTIONS END
 //=============================================================================
 
-var isVideoFocused = debounce(isVideoFocused, 200),
-    isFormFocused = debounce(isFormFocused, 200),
-    iframe = document.getElementById('video'),
+var isFormFocused = debounce(isFormFocused, 200),
     form = document.getElementById('form');
 
-window.addEventListener('scroll', isVideoFocused, false);
 window.addEventListener('scroll', isFormFocused, false);
-
-function isVideoFocused() {
-    if (isOnScreen(iframe)) {
-        iframe.src += '?autoplay=1';
-        window.removeEventListener('scroll', isVideoFocused);
-    }
-}
 
 function isFormFocused() {
     if (isOnScreen(form)) {
